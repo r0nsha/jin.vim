@@ -23,7 +23,7 @@ syn match jinConstant "_\?[A-Z][_a-zA-Z0-9]*"
 " Functions
 syn match jinKeyword '\<fn\s\+\>\?'
     \ nextgroup=jinFunctionName skipempty skipwhite
-syn match jinFunctionName "[^( -!{]\+" contained
+syn match jinFunctionName "=\?[^( -!{]\+" contained
 
 " Message (keyword) arguments.
 syn cluster jinArguments contains=jinFunctionArguments
@@ -42,6 +42,7 @@ syn region jinStringEmbed matchgroup=jinStringEmbedDelimiter
     \ start="{" end="}" skip="\\\\\|\\{" contains=TOP contained
 
 " Generic characters
+syn match jinArrow "->"
 syn match jinDelimiters "[\[\]{}.,=_]"
 syn match jinOperators "[-+\*^%!/<>&|~]"
 
@@ -49,12 +50,18 @@ syn match jinOperators "[-+\*^%!/<>&|~]"
 syn match jinKeyword '\.\@<!\<\(let\|else\|type\|import\|mut\|return\|true\|false\)\>'
 syn match jinKeyword '\.\@<!\<\(for\|as\|match\|extern\|if\|move\|loop\|break\)\>'
 
+" Builtins
+syn match jinBuiltin '\.\@<!\<\(i8\|i16\|i32\|i64\|int\|u8\|u16\|u32\|u64\|uint\)\>'
+syn match jinBuiltin '\.\@<!\<\(f32\|f64\|str\|bool\|unit\|never\)\>'
+
 " Comments
 syn region jinComment start="//" end="$" keepend
 
-hi def link jinDelimiters Operator
+hi def link jinDelimiters Delimiter
+hi def link jinArrow Delimiter
 hi def link jinOperators Operator
 hi def link jinKeyword Keyword
+hi def link jinBuiltin Type
 hi def link jinComment Comment
 hi def link jinModuleDocComment Comment
 hi def link jinDocComment Comment
