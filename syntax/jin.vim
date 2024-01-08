@@ -25,7 +25,7 @@ syn match jinKeyword '\<fn\s\+\>\?'
     \ nextgroup=jinFunctionName skipempty skipwhite
 syn match jinFunctionName "=\?[^( -!{]\+" contained
 
-" Message (keyword) arguments.
+" Function positional/named arguments.
 syn cluster jinArguments contains=jinFunctionArguments
 syn region jinFunctionArguments start="(" end=")" contained contains=TOP
 syn match jinKeywordArgument "_\?[a-z][_a-zA-Z0-9]*:[^:]" contained
