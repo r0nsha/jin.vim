@@ -9,8 +9,8 @@ augroup jin.vim
 
     setlocal sts=2 sw=2 ts=2
     setlocal matchpairs-=<:>
-    setlocal comments=:#
-    setlocal commentstring=#\ %s
+    setlocal comments=://
+    setlocal commentstring=//\ %s
     setlocal formatoptions=jcroql
 
     if get(g:, "jinFolding", 0)
