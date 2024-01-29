@@ -15,7 +15,7 @@ syn match jinNumber "\d\+\([\._]\d\+\)*\([eE]+\d\+\)\?u\?"
 syn match jinHex "0[xX][0-9a-fA-F]\+"
 
 " Variables/identifiers
-syn match jinIdentifier "_\?[a-z][_a-zA-Z0-9]\+?\?" nextgroup=@jinArguments
+syn match jinIdentifier "_\?[a-z][_a-zA-Z0-9]\+" nextgroup=@jinArguments
 
 " Constants
 syn match jinConstant "_\?[A-Z][_a-zA-Z0-9]*"
