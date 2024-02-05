@@ -48,7 +48,7 @@ syn match jinOperators "[-+\*^%!/<>&|~]"
 
 " Keywords
 syn match jinKeyword '\.\@<!\<\(let\|else\|type\|import\|mut\|return\|true\|false\)\>'
-syn match jinKeyword '\.\@<!\<\(for\|as\|transmute\|match\|extern\|if\|move\|loop\|break\|unsafe\)\>'
+syn match jinKeyword '\.\@<!\<\(for\|as\|transmute\|match\|extern\|if\|for\|move\|break\|unsafe\)\>'
 
 " Builtins
 syn match jinBuiltin '\.\@<!\<\(i8\|i16\|i32\|i64\|int\|u8\|u16\|u32\|u64\|uint\)\>'
