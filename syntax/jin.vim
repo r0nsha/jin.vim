@@ -51,8 +51,9 @@ syn match jinKeyword '\.\@<!\<\(let\|else\|type\|pub\|use\|mut\|return\|true\|fa
 syn match jinKeyword '\.\@<!\<\(as\|transmute\|match\|extern\|if\|for\|move\|ref\|break\|unsafe\)\>'
 
 " Builtins
-syn match jinBuiltin '\.\@<!\<\(i8\|i16\|i32\|i64\|int\|u8\|u16\|u32\|u64\|uint\)\>'
-syn match jinBuiltin '\.\@<!\<\(f32\|f64\|str\|bool\|unit\|never\)\>'
+syn match jinBuiltin '\.\@<!\<\(I8\|I16\|I32\|I64\|Int\)\>'
+syn match jinBuiltin '\.\@<!\<\(U8\|U16\|U32\|U64\|Uint\)\>'
+syn match jinBuiltin '\.\@<!\<\(F32\|F64\|Str\|Bool\|Never\)\>'
 
 " Comments
 syn region jinComment start="#" end="$" keepend
