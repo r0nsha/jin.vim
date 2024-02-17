@@ -19,8 +19,8 @@ function! JinIndent(lnum)
     endif
 
     " grab the previous and current line, stripping comments.
-    let prevl = substitute(getline(prevlnum), '//.*$', '', '')
-    let thisl = substitute(getline(a:lnum), '//.*$', '', '')
+    let prevl = substitute(getline(prevlnum), '#.*$', '', '')
+    let thisl = substitute(getline(a:lnum), '#.*$', '', '')
     let previ = indent(prevlnum)
 
     let ind = previ
