@@ -47,7 +47,7 @@ syn match jinDelimiters "[\[\]{}.,=_]"
 syn match jinOperators "[-+\*^%!/<>&|~]"
 
 " Keywords
-syn match jinKeyword '\.\@<!\<\(let\|else\|type\|pub\|use\|mut\|return\|true\|false\)\>'
+syn match jinKeyword '\.\@<!\<\(let\|else\|type\|use\|mut\|return\|true\|false\)\>'
 syn match jinKeyword '\.\@<!\<\(as\|match\|extern\|if\|for\|move\|ref\|break\|unsafe\)\>'
 
 " Builtins
