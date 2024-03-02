@@ -39,7 +39,7 @@ syn region jinChar matchgroup=jinSingleStringDelimiter
     \ start="'" end="'" skip="\\\\\|\\'"
 
 syn region jinStringEmbed matchgroup=jinStringEmbedDelimiter
-    \ start="\\(" end=")" skip="\\\\\|\\(" contains=TOP contained
+    \ start="{" end="}" skip="\\\\\|\\{" contains=TOP contained
 
 " Generic characters
 syn match jinArrow "->"
