@@ -56,7 +56,7 @@ syn match jinBuiltin '\.\@<!\<\(u8\|u16\|u32\|u64\|uint\)\>'
 syn match jinBuiltin '\.\@<!\<\(f32\|f64\|str\|char\|bool\|never\)\>'
 
 " Comments
-syn region jinComment start="#" end="$" keepend
+syn region jinComment start="//" end="$" keepend
 
 hi def link jinDelimiters Delimiter
 hi def link jinArrow Delimiter
