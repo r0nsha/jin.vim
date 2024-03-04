@@ -17,6 +17,9 @@ syn match jinHex "0[xX][0-9a-fA-F]\+"
 " Variables/identifiers
 syn match jinIdentifier "[a-z][\-a-zA-Z0-9]\+" nextgroup=@jinArguments
 
+syn region jinRawIdentifier matchgroup=jinRawIdentifierDelimiter
+    \ start="`" end="`" skip="\\\\\|\\\""
+
 " Constants
 syn match jinConstant "[A-Z][\-a-zA-Z0-9]*"
 
@@ -76,5 +79,7 @@ hi def link jinDoubleStringDelimiter jinString
 hi def link jinStringEmbedDelimiter Delimiter
 hi def link jinFunctionName Function
 hi def link jinIdentifier Identifier
+hi def link jinRawIdentifier jinString
+hi def link jinRawIdentifierDelimiter jinString
 hi def link jinKeywordArgument Identifier
 hi def link jinConstant Constant
