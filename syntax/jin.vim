@@ -15,13 +15,13 @@ syn match jinNumber "\d\+\([\._]\d\+\)*\([eE]+\d\+\)\?u\?"
 syn match jinHex "0[xX][0-9a-fA-F]\+"
 
 " Variables/identifiers
-syn match jinIdentifier "[a-z][\-a-zA-Z0-9]\+" nextgroup=@jinArguments
+syn match jinIdentifier "_\?[a-z][_\-a-zA-Z0-9]\+" nextgroup=@jinArguments
 
 syn region jinRawIdentifier matchgroup=jinRawIdentifierDelimiter
     \ start="`" end="`" skip="\\\\\|\\\""
 
 " Constants
-syn match jinConstant "[A-Z][\-a-zA-Z0-9]*"
+syn match jinConstant "_\?[A-Z][_\-a-zA-Z0-9]*"
 
 " Functions
 syn match jinKeyword '\<fn\s\+\>\?'
