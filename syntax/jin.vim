@@ -15,10 +15,10 @@ syn match jinNumber "\d\+\([\._]\d\+\)*\([eE]+\d\+\)\?u\?"
 syn match jinHex "0[xX][0-9a-fA-F]\+"
 
 " Variables/identifiers
-syn match jinIdentifier "_\?[a-z][\-_a-zA-Z0-9]\+" nextgroup=@jinArguments
+syn match jinIdentifier "[a-z][\-a-zA-Z0-9]\+" nextgroup=@jinArguments
 
 " Constants
-syn match jinConstant "_\?[A-Z][\-_a-zA-Z0-9]*"
+syn match jinConstant "[A-Z][\-a-zA-Z0-9]*"
 
 " Functions
 syn match jinKeyword '\<fn\s\+\>\?'
@@ -28,7 +28,7 @@ syn match jinFunctionName "=\?[^( -!{]\+" contained
 " Function positional/named arguments.
 syn cluster jinArguments contains=jinFunctionArguments
 syn region jinFunctionArguments start="(" end=")" contained contains=TOP
-syn match jinKeywordArgument "_\?[a-z][_a-zA-Z0-9]*:[^:]" contained
+syn match jinKeywordArgument "[a-z][a-zA-Z0-9]*:[^:]" contained
     \ containedin=jinFunctionArguments
 
 " Strings
