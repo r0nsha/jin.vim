@@ -56,7 +56,7 @@ syn match jinKeyword '\.\@<!\<\(as\|match\|extern\|if\|for\|move\|ref\|break\|un
 " Builtins
 syn match jinBuiltin '\.\@<!\<\(i8\|i16\|i32\|i64\|int\)\>'
 syn match jinBuiltin '\.\@<!\<\(u8\|u16\|u32\|u64\|uint\)\>'
-syn match jinBuiltin '\.\@<!\<\(f32\|f64\|str\|char\|bool\|never\)\>'
+syn match jinBuiltin '\.\@<!\<\(f32\|f64\|str\|char\|bool\|never\|ptr\)\>'
 
 " Comments
 syn region jinComment start="//" end="$" keepend
