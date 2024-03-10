@@ -7,7 +7,7 @@ let b:did_ftplugin = 1
 augroup jin.vim
     autocmd!
 
-    setlocal sts=4 sw=4 ts=4
+    setlocal sts=4 sw=4 ts=4 expandtab
     setlocal matchpairs-=<:>
     setlocal comments=://
     setlocal commentstring=//\ %s
