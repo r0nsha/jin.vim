@@ -4,19 +4,11 @@ endif
 
 let b:did_ftplugin = 1
 
-augroup jin.vim
-    autocmd!
+setlocal matchpairs-=<:>
+setlocal comments=://
+setlocal commentstring=//%s
+setlocal formatoptions=jcroql
+setlocal smartindent nocindent
 
-    setlocal sts=4 sw=4 ts=4 expandtab
-    setlocal matchpairs-=<:>
-    setlocal comments=://
-    setlocal commentstring=//\ %s
-    setlocal formatoptions=jcroql
-
-    if get(g:, "jinFolding", 0)
-      setlocal foldmethod=expr
-      setlocal foldexpr=jin#Fold()
-    endif
-augroup END
-
-setlocal sw=4 sts=4 ts=4 expandtab
+setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+setlocal suffixesadd=.jin
