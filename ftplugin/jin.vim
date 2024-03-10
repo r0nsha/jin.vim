@@ -4,6 +4,8 @@ endif
 
 let b:did_ftplugin = 1
 
+let g:sleuth_jin_heuristics = 0
+
 setlocal matchpairs-=<:>
 setlocal comments=://
 setlocal commentstring=//%s
