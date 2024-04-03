@@ -21,9 +21,6 @@ syn match jinIdentifier "_\?[a-z][_\-a-zA-Z0-9]\+"
 syn region jinRawIdentifier matchgroup=jinRawIdentifierDelimiter
     \ start="`" end="`" skip="\\\\\|\\\""
 
-" Constants
-syn match jinConstant "_\?[A-Z][_\-a-zA-Z0-9]*"
-
 " Strings
 syn region jinString matchgroup=jinStringDelimiter
     \ start="\"" end="\"" skip="\\\\\|\\\"" contains=jinStringEmbed
@@ -64,4 +61,3 @@ hi def link jinStringEmbedDelimiter Delimiter
 hi def link jinIdentifier Identifier
 hi def link jinRawIdentifier jinString
 hi def link jinRawIdentifierDelimiter jinString
-hi def link jinConstant Constant
