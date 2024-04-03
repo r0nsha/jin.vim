@@ -16,7 +16,7 @@ syn match jinOctal "0[oO][0-7]\+"
 syn match jinHex "0[xX][0-9a-fA-F]\+"
 
 " Variables/Identifiers
-syn match jinIdentifier "_\?[a-z][_\-a-zA-Z0-9]\+"
+syn match jinIdentifier "_\?[a-zA-Z][_\-a-zA-Z0-9]\*"
 
 syn region jinRawIdentifier matchgroup=jinRawIdentifierDelimiter
     \ start="`" end="`" skip="\\\\\|\\\""
